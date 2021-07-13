@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+    <manifest filename="/Users/hsutzu/eclipse-workspace/EasyCountDown/manifest.xml"/>
+    <pcToLineNum>
+        <entry filename="/Users/hsutzu/eclipse-workspace/EasyCountDown/source/EasyCountDownApp.mc" id="3" lineNum="7" pc="268435456" symbol="initialize"/>
+        <entry filename="/Users/hsutzu/eclipse-workspace/EasyCountDown/source/EasyCountDownApp.mc" id="3" lineNum="8" pc="268435460" symbol="initialize"/>
+        <entry filename="/Users/hsutzu/eclipse-workspace/EasyCountDown/source/EasyCountDownApp.mc" id="4" lineNum="12" pc="268435479" symbol="onStart"/>
+        <entry filename="/Users/hsutzu/eclipse-workspace/EasyCountDown/source/EasyCountDownApp.mc" id="5" lineNum="16" pc="268435484" symbol="onStop"/>
+        <entry filename="/Users/hsutzu/eclipse-workspace/EasyCountDown/source/EasyCountDownApp.mc" id="6" lineNum="20" pc="268435489" symbol="getInitialView"/>
+        <entry filename="/Users/hsutzu/eclipse-workspace/EasyCountDown/source/EasyCountDownApp.mc" id="6" lineNum="21" pc="268435493" symbol="getInitialView"/>
+        <entry filename="/Users/hsutzu/eclipse-workspace/EasyCountDown/source/EasyCountDownApp.mc" id="7" lineNum="26" pc="268435531" symbol="getApp"/>
+        <entry filename="/Users/hsutzu/eclipse-workspace/EasyCountDown/source/EasyCountDownApp.mc" id="7" lineNum="27" pc="268435543" symbol="getApp"/>
+        <entry filename="/Users/hsutzu/eclipse-workspace/EasyCountDown/source/EasyCountDownView.mc" id="9" lineNum="16" pc="268435560" symbol="initialize"/>
+        <entry filename="/Users/hsutzu/eclipse-workspace/EasyCountDown/source/EasyCountDownView.mc" id="9" lineNum="17" pc="268435564" symbol="initialize"/>
+        <entry filename="/Users/hsutzu/eclipse-workspace/EasyCountDown/source/EasyCountDownView.mc" id="9" lineNum="18" pc="268435582" symbol="initialize"/>
+        <entry filename="/Users/hsutzu/eclipse-workspace/EasyCountDown/source/EasyCountDownView.mc" id="9" lineNum="19" pc="268435615" symbol="initialize"/>
+        <entry filename="/Users/hsutzu/eclipse-workspace/EasyCountDown/source/EasyCountDownView.mc" id="10" lineNum="23" pc="268435649" symbol="onLayout"/>
+        <entry filename="/Users/hsutzu/eclipse-workspace/EasyCountDown/source/EasyCountDownView.mc" id="10" lineNum="24" pc="268435653" symbol="onLayout"/>
+        <entry filename="/Users/hsutzu/eclipse-workspace/EasyCountDown/source/EasyCountDownView.mc" id="10" lineNum="25" pc="268435690" symbol="onLayout"/>
+        <entry filename="/Users/hsutzu/eclipse-workspace/EasyCountDown/source/EasyCountDownView.mc" id="10" lineNum="26" pc="268435709" symbol="onLayout"/>
+        <entry filename="/Users/hsutzu/eclipse-workspace/EasyCountDown/source/EasyCountDownView.mc" id="11" lineNum="32" pc="268435729" symbol="onShow"/>
+        <entry filename="/Users/hsutzu/eclipse-workspace/EasyCountDown/source/EasyCountDownView.mc" id="12" lineNum="36" pc="268435734" symbol="onUpdate"/>
+        <entry filename="/Users/hsutzu/eclipse-workspace/EasyCountDown/source/EasyCountDownView.mc" id="12" lineNum="37" pc="268435738" symbol="onUpdate"/>
+        <entry filename="/Users/hsutzu/eclipse-workspace/EasyCountDown/source/EasyCountDownView.mc" id="12" lineNum="39" pc="268435759" symbol="onUpdate"/>
+        <entry filename="/Users/hsutzu/eclipse-workspace/EasyCountDown/source/EasyCountDownView.mc" id="12" lineNum="40" pc="268435782" symbol="onUpdate"/>
+        <entry filename="/Users/hsutzu/eclipse-workspace/EasyCountDown/source/EasyCountDownView.mc" id="12" lineNum="41" pc="268435821" symbol="onUpdate"/>
+        <entry filename="/Users/hsutzu/eclipse-workspace/EasyCountDown/source/EasyCountDownView.mc" id="12" lineNum="42" pc="268435873" symbol="onUpdate"/>
+        <entry filename="/Users/hsutzu/eclipse-workspace/EasyCountDown/source/EasyCountDownView.mc" id="12" lineNum="43" pc="268435888" symbol="onUpdate"/>
+        <entry filename="/Users/hsutzu/eclipse-workspace/EasyCountDown/source/EasyCountDownView.mc" id="12" lineNum="49" pc="268435907" symbol="onUpdate"/>
+        <entry filename="/Users/hsutzu/eclipse-workspace/EasyCountDown/source/EasyCountDownView.mc" id="12" lineNum="50" pc="268435943" symbol="onUpdate"/>
+        <entry filename="/Users/hsutzu/eclipse-workspace/EasyCountDown/source/EasyCountDownView.mc" id="12" lineNum="51" pc="268435955" symbol="onUpdate"/>
+        <entry filename="/Users/hsutzu/eclipse-workspace/EasyCountDown/source/EasyCountDownView.mc" id="12" lineNum="52" pc="268435969" symbol="onUpdate"/>
+        <entry filename="/Users/hsutzu/eclipse-workspace/EasyCountDown/source/EasyCountDownView.mc" id="12" lineNum="53" pc="268435985" symbol="onUpdate"/>
+        <entry filename="/Users/hsutzu/eclipse-workspace/EasyCountDown/source/EasyCountDownView.mc" id="13" lineNum="59" pc="268436002" symbol="onHide"/>
+        <entry filename="/Users/hsutzu/eclipse-workspace/EasyCountDown/source/EasyCountDownView.mc" id="14" lineNum="62" pc="268436007" symbol="transferUnixToString"/>
+        <entry filename="/Users/hsutzu/eclipse-workspace/EasyCountDown/source/EasyCountDownView.mc" id="14" lineNum="63" pc="268436011" symbol="transferUnixToString"/>
+        <entry filename="/Users/hsutzu/eclipse-workspace/EasyCountDown/source/EasyCountDownView.mc" id="14" lineNum="64" pc="268436041" symbol="transferUnixToString"/>
+        <entry filename="/Users/hsutzu/eclipse-workspace/EasyCountDown/source/EasyCountDownView.mc" id="14" lineNum="65" pc="268436072" symbol="transferUnixToString"/>
+        <entry filename="/Users/hsutzu/eclipse-workspace/EasyCountDown/source/EasyCountDownView.mc" id="15" lineNum="68" pc="268436144" symbol="drawActivityName"/>
+        <entry filename="/Users/hsutzu/eclipse-workspace/EasyCountDown/source/EasyCountDownView.mc" id="15" lineNum="69" pc="268436148" symbol="drawActivityName"/>
+        <entry filename="/Users/hsutzu/eclipse-workspace/EasyCountDown/source/EasyCountDownView.mc" id="15" lineNum="70" pc="268436184" symbol="drawActivityName"/>
+        <entry filename="/Users/hsutzu/eclipse-workspace/EasyCountDown/source/EasyCountDownView.mc" id="16" lineNum="79" pc="268436257" symbol="drawActivityDate"/>
+        <entry filename="/Users/hsutzu/eclipse-workspace/EasyCountDown/source/EasyCountDownView.mc" id="16" lineNum="80" pc="268436261" symbol="drawActivityDate"/>
+        <entry filename="/Users/hsutzu/eclipse-workspace/EasyCountDown/source/EasyCountDownView.mc" id="16" lineNum="81" pc="268436297" symbol="drawActivityDate"/>
+        <entry filename="/Users/hsutzu/eclipse-workspace/EasyCountDown/source/EasyCountDownView.mc" id="17" lineNum="90" pc="268436364" symbol="drawCountDays"/>
+        <entry filename="/Users/hsutzu/eclipse-workspace/EasyCountDown/source/EasyCountDownView.mc" id="17" lineNum="91" pc="268436368" symbol="drawCountDays"/>
+        <entry filename="/Users/hsutzu/eclipse-workspace/EasyCountDown/source/EasyCountDownView.mc" id="17" lineNum="92" pc="268436404" symbol="drawCountDays"/>
+        <entry filename="/Users/hsutzu/eclipse-workspace/EasyCountDown/source/EasyCountDownView.mc" id="17" lineNum="100" pc="268436483" symbol="drawCountDays"/>
+        <entry filename="/Users/hsutzu/eclipse-workspace/EasyCountDown/source/EasyCountDownView.mc" id="17" lineNum="101" pc="268436498" symbol="drawCountDays"/>
+        <entry filename="/Users/hsutzu/eclipse-workspace/EasyCountDown/source/EasyCountDownView.mc" id="17" lineNum="102" pc="268436515" symbol="drawCountDays"/>
+        <entry filename="/Users/hsutzu/eclipse-workspace/EasyCountDown/source/EasyCountDownView.mc" id="17" lineNum="103" pc="268436541" symbol="drawCountDays"/>
+        <entry filename="/Users/hsutzu/eclipse-workspace/EasyCountDown/source/EasyCountDownView.mc" id="18" lineNum="110" pc="268436596" symbol="getColor"/>
+        <entry filename="/Users/hsutzu/eclipse-workspace/EasyCountDown/source/EasyCountDownView.mc" id="18" lineNum="111" pc="268436600" symbol="getColor"/>
+        <entry filename="/Users/hsutzu/eclipse-workspace/EasyCountDown/source/EasyCountDownView.mc" id="18" lineNum="112" pc="268436620" symbol="getColor"/>
+        <entry filename="/Users/hsutzu/eclipse-workspace/EasyCountDown/source/EasyCountDownView.mc" id="18" lineNum="113" pc="268436636" symbol="getColor"/>
+        <entry filename="/Users/hsutzu/eclipse-workspace/EasyCountDown/source/EasyCountDownView.mc" id="18" lineNum="114" pc="268436656" symbol="getColor"/>
+        <entry filename="/Users/hsutzu/eclipse-workspace/EasyCountDown/source/EasyCountDownView.mc" id="18" lineNum="115" pc="268436672" symbol="getColor"/>
+        <entry filename="/Users/hsutzu/eclipse-workspace/EasyCountDown/source/EasyCountDownView.mc" id="18" lineNum="116" pc="268436686" symbol="getColor"/>
+        <entry filename="/Users/hsutzu/eclipse-workspace/EasyCountDown/source/EasyCountDownView.mc" id="18" lineNum="117" pc="268436702" symbol="getColor"/>
+        <entry filename="/Users/hsutzu/eclipse-workspace/EasyCountDown/source/EasyCountDownView.mc" id="18" lineNum="118" pc="268436713" symbol="getColor"/>
+        <entry filename="/Users/hsutzu/eclipse-workspace/EasyCountDown/source/EasyCountDownView.mc" id="18" lineNum="120" pc="268436729" symbol="getColor"/>
+        <entry filename="Rez" id="24" lineNum="18" pc="268436743" symbol="MainLayout"/>
+        <entry filename="Rez" id="24" lineNum="20" pc="268436755" symbol="MainLayout"/>
+        <entry filename="Rez" id="24" lineNum="21" pc="268436874" symbol="MainLayout"/>
+        <entry filename="Rez" id="24" lineNum="23" pc="268436926" symbol="MainLayout"/>
+    </pcToLineNum>
+    <symbolTable>
+        <entry id="8388639" module="true" symbol="Graphics"/>
+        <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+        <entry id="4" module="true" symbol="globals/Rez/Menus"/>
+        <entry field="true" id="17" symbol="activityName"/>
+        <entry id="15" method="true" symbol="MainLayout"/>
+        <entry id="8388924" module="true" symbol="Gregorian"/>
+        <entry field="true" id="8388611" module="true" symbol="Toybox"/>
+        <entry id="27" method="true" symbol="drawActivityDate"/>
+        <entry field="true" id="18" symbol="AppName"/>
+        <entry id="8" module="true" symbol="globals/Rez/Strings"/>
+        <entry id="8388772" module="true" object="true" symbol="Fonts"/>
+        <entry id="8389345" symbol="rezId"/>
+        <entry id="8388648" module="true" symbol="WatchUi"/>
+        <entry id="2" module="true" symbol="globals/Rez"/>
+        <entry field="true" id="13" symbol="id_monkey"/>
+        <entry id="8389124" method="true" symbol="onUpdate"/>
+        <entry field="true" id="8389065" symbol="locY"/>
+        <entry field="true" id="8389064" symbol="locX"/>
+        <entry id="8388771" module="true" object="true" symbol="Drawables"/>
+        <entry id="12" module="true" symbol="Menus"/>
+        <entry id="8389275" method="true" symbol="getApp"/>
+        <entry id="6" module="true" symbol="globals/Rez/Layouts"/>
+        <entry id="8389122" method="true" symbol="onLayout"/>
+        <entry id="10" object="true" symbol="EasyCountDownView"/>
+        <entry field="true" id="8389063" symbol="identifier"/>
+        <entry field="true" id="22" symbol="&lt;globals/EasyCountDownView/&lt;&gt;width&gt;"/>
+        <entry id="7" module="true" symbol="globals/Rez/JsonData"/>
+        <entry id="3" module="true" symbol="globals/Rez/Drawables"/>
+        <entry id="25" method="true" symbol="transferUnixToString"/>
+        <entry field="true" id="21" symbol="&lt;globals/EasyCountDownView/&lt;&gt;utc&gt;"/>
+        <entry field="true" id="16" symbol="activityDate"/>
+        <entry field="true" id="23" symbol="&lt;globals/EasyCountDownView/&lt;&gt;height&gt;"/>
+        <entry id="8388644" module="true" symbol="System"/>
+        <entry id="8388645" module="true" symbol="Time"/>
+        <entry id="8388769" module="true" object="true" symbol="Rez"/>
+        <entry id="8388640" module="true" symbol="Lang"/>
+        <entry id="8390088" module="true" object="true" symbol="JsonData"/>
+        <entry field="true" id="19" symbol="&lt;globals/EasyCountDownView/&lt;&gt;activityName&gt;"/>
+        <entry field="true" id="20" symbol="&lt;globals/EasyCountDownView/&lt;&gt;activityDateUnix&gt;"/>
+        <entry field="true" id="14" symbol="LauncherIcon"/>
+        <entry id="8388610" symbol="statics"/>
+        <entry id="8389123" method="true" symbol="onShow"/>
+        <entry id="8389350" module="true" symbol="globals"/>
+        <entry id="29" method="true" symbol="getColor"/>
+        <entry id="8388770" module="true" object="true" symbol="Strings"/>
+        <entry id="26" method="true" symbol="drawActivityName"/>
+        <entry id="8388702" method="true" symbol="initialize"/>
+        <entry id="8389279" method="true" symbol="onStart"/>
+        <entry id="8389280" method="true" symbol="getInitialView"/>
+        <entry id="8389281" method="true" symbol="onStop"/>
+        <entry id="28" method="true" symbol="drawCountDays"/>
+        <entry id="11" module="true" symbol="Layouts"/>
+        <entry field="true" id="24" symbol="WEEK"/>
+        <entry id="5" module="true" symbol="globals/Rez/Fonts"/>
+        <entry id="8389125" method="true" symbol="onHide"/>
+        <entry id="9" object="true" symbol="EasyCountDownApp"/>
+        <entry id="8388635" module="true" symbol="Application"/>
+    </symbolTable>
+    <localVars>
+        <entry arg="true" endPc="268435484" name="state" stackId="1" startPc="268435479"/>
+        <entry arg="true" endPc="268435489" name="state" stackId="1" startPc="268435484"/>
+        <entry arg="true" endPc="268435729" name="dc" stackId="1" startPc="268435649"/>
+        <entry endPc="268436001" name="interval" stackId="6" startPc="268435738"/>
+        <entry endPc="268436001" name="timeZoneOffset" stackId="3" startPc="268435738"/>
+        <entry endPc="268436001" name="activityDateString" stackId="2" startPc="268435738"/>
+        <entry endPc="268436001" name="todayMoment" stackId="5" startPc="268435738"/>
+        <entry endPc="268436001" name="activityDateMoment" stackId="4" startPc="268435738"/>
+        <entry endPc="268436001" name="days" stackId="7" startPc="268435738"/>
+        <entry arg="true" endPc="268436002" name="dc" stackId="1" startPc="268435734"/>
+        <entry endPc="268436143" name="moment" stackId="2" startPc="268436011"/>
+        <entry endPc="268436143" name="lang" stackId="3" startPc="268436011"/>
+        <entry arg="true" endPc="268436144" name="unix" stackId="1" startPc="268436007"/>
+        <entry arg="true" endPc="268436257" name="dc" stackId="1" startPc="268436144"/>
+        <entry arg="true" endPc="268436364" name="dc" stackId="1" startPc="268436257"/>
+        <entry arg="true" endPc="268436364" name="activityDateString" stackId="2" startPc="268436257"/>
+        <entry endPc="268436595" name="color" stackId="3" startPc="268436368"/>
+        <entry arg="true" endPc="268436596" name="dc" stackId="1" startPc="268436364"/>
+        <entry arg="true" endPc="268436596" name="days" stackId="2" startPc="268436364"/>
+        <entry arg="true" endPc="268436743" name="days" stackId="1" startPc="268436596"/>
+        <entry endPc="268436943" name="rez_cmp_local_bitmap_id_monkey" stackId="2" startPc="268436755"/>
+        <entry arg="true" endPc="268436944" name="dc" stackId="1" startPc="268436743"/>
+    </localVars>
+    <annotations>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="id_monkey"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="activityDate"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="activityName"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+    </annotations>
+    <dataEntryOffsetMappings>
+        <dataEntry label="globals" offset="87" parentId="" symbolId="globals" type="module"/>
+        <dataEntry label="globals/Rez" offset="158" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry label="globals/Rez/Drawables" offset="237" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry label="globals/Rez/Menus" offset="284" parentId="Rez" symbolId="Menus" type="module"/>
+        <dataEntry label="globals/Rez/Fonts" offset="315" parentId="Rez" symbolId="Fonts" type="module"/>
+        <dataEntry label="globals/Rez/Layouts" offset="346" parentId="Rez" symbolId="Layouts" type="module"/>
+        <dataEntry label="globals/Rez/JsonData" offset="385" parentId="Rez" symbolId="JsonData" type="module"/>
+        <dataEntry label="globals/Rez/Strings" offset="416" parentId="Rez" symbolId="Strings" type="module"/>
+        <dataEntry label="globals/EasyCountDownApp" offset="471" parentId="globals" symbolId="EasyCountDownApp" type="class"/>
+        <dataEntry label="globals/EasyCountDownView" offset="542" parentId="globals" symbolId="EasyCountDownView" type="class"/>
+    </dataEntryOffsetMappings>
+    <functions>
+        <functionEntry accessMode="public" name="initialize" parent="EasyCountDownApp">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onStart" parent="EasyCountDownApp">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onStop" parent="EasyCountDownApp">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="getInitialView" parent="EasyCountDownApp">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="getApp">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="EasyCountDownView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onLayout" parent="EasyCountDownView">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onShow" parent="EasyCountDownView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onUpdate" parent="EasyCountDownView">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onHide" parent="EasyCountDownView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="transferUnixToString" parent="EasyCountDownView">
+            <param id="unix"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="drawActivityName" parent="EasyCountDownView">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="drawActivityDate" parent="EasyCountDownView">
+            <param id="dc"/>
+            <param id="activityDateString"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="drawCountDays" parent="EasyCountDownView">
+            <param id="dc"/>
+            <param id="days"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="getColor" parent="EasyCountDownView">
+            <param id="days"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="MainLayout" parent="Layouts">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+    </functions>
+</debugInfo>

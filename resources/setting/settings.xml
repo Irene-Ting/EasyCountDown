@@ -1,0 +1,8 @@
+<settings>
+	<setting propertyKey="@Properties.activityName" title="@Strings.activityName">
+        <settingConfig type="alphaNumeric"/>
+    </setting>
+    <setting propertyKey="@Properties.activityDate" title="@Strings.activityDate">
+        <settingConfig type="date"/>
+    </setting>
+</settings>

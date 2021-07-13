@@ -1,0 +1,4 @@
+<properties>
+    <property id="activityName" type="string"></property>
+    <property id="activityDate" type="number">1640966400</property> 
+</properties>
