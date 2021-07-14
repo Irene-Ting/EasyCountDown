@@ -14,6 +14,7 @@ class EasyCountDownView extends WatchUi.View {
 
     private var activityNames = new [MAX_ACTIVITY];
     private var activityDateUnixs = new [MAX_ACTIVITY];
+    private var activityShowData = new [MAX_ACTIVITY];
     private var numOfActivity;
     private var appIcon;
     private var sadFaceIcon;
@@ -35,7 +36,7 @@ class EasyCountDownView extends WatchUi.View {
     function onLayout(dc as Dc) as Void {
         setLayout(Rez.Layouts.MainLayout(dc));
         appIcon = App.loadResource(Rez.Drawables.CalendarIcon);
-        sadFaceIcon = App.loadResource(Rez.Drawables.SadFace);
+        // sadFaceIcon = App.loadResource(Rez.Drawables.SadFace);
         dcWidth = dc.getWidth();
         dcHeight = dc.getHeight();
     }
@@ -55,12 +56,21 @@ class EasyCountDownView extends WatchUi.View {
         drawPageArc(dc);
 
         if(numOfActivity==0) {
+            drawSadFace(dc);
             drawEmptyMsg(dc);
         } else {
             for(var i = 0; i < numOfActivity; i++) {
-                drawActivity(dc, i);
+                var activityName = activityNames[i];
+                var activityDateString = transferUnixToString(activityDateUnixs[i]);
+                var days = countDaysFromToday(activityDateUnixs[i]);
+                
+                var yPosition = 0.1 + 0.9 * (i+1)/(numOfActivity+1);
+                activityShowData[i] = [activityName, days, activityDateString];
+                drawActivity(dc, activityShowData[i], yPosition);
             }
         }
+
+        App.getApp().setProperty("activityData", activityShowData);
     }
 
     // Called when this View is removed from the screen. Save the
@@ -120,12 +130,25 @@ class EasyCountDownView extends WatchUi.View {
         );
     }
 
-    function drawEmptyMsg(dc) {
-        dc.drawBitmap(
-            dcWidth / 2 - SADFACE_ICON_WIDTH / 2,
-            dcHeight / 2 - SADFACE_ICON_WIDTH / 2,
-            sadFaceIcon
+    function drawSadFace(dc) {
+        dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_TRANSPARENT);
+        dc.setPenWidth(3);
+        dc.drawCircle(
+            dcWidth / 2,
+            dcHeight / 2,
+            dcWidth / 6
         );
+        dc.drawArc(
+            dcWidth / 2,
+            dcHeight / 2 + dcWidth / 6,
+            dcHeight / 10,
+            Gfx.ARC_COUNTER_CLOCKWISE,
+            55,
+            125
+        );
+    }
+
+    function drawEmptyMsg(dc) {
         dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
         dc.drawText(
 	    	dcWidth / 2, 
@@ -136,35 +159,36 @@ class EasyCountDownView extends WatchUi.View {
 	    );
     }
 
-    function drawActivity(dc, idx) {
-        var days = calculateDays(idx);
-        var color = getColor(days);
-        var position = 0.1 + 0.9 * (idx+1)/(numOfActivity+1);
+    function drawActivity(dc, nameAndDays, yPosition) {
+        var activityName = nameAndDays[0];
+        var activityDays = nameAndDays[1];
+        var color = getColor(activityDays);
+        var fontSize = getFontSize(numOfActivity);
+
         dc.setColor(color, Gfx.COLOR_TRANSPARENT);
         dc.setPenWidth(5);
         dc.drawPoint(
             dcWidth * 0.2,
-            dcHeight * position
+            dcHeight * yPosition
         );
         dc.drawText(
 	    	dcWidth * 0.25, 
-	    	dcHeight * position, 
-	    	Gfx.FONT_SMALL, 
-	    	activityNames[idx], 
+	    	dcHeight * yPosition, 
+	    	fontSize, 
+	    	activityName, 
 	    	Gfx.TEXT_JUSTIFY_LEFT | Gfx.TEXT_JUSTIFY_VCENTER
 	    );
         dc.drawText(
-	    	dcWidth * 0.75, 
-	    	dcHeight * position, 
-	    	Gfx.FONT_SMALL, 
-	    	days, 
+	    	dcWidth * 0.80, 
+	    	dcHeight * yPosition, 
+	    	fontSize, 
+	    	activityDays, 
 	    	Gfx.TEXT_JUSTIFY_RIGHT | Gfx.TEXT_JUSTIFY_VCENTER
 	    );
     }
 
-    function calculateDays(idx) {
-        var activityDateString = transferUnixToString(activityDateUnixs[idx]);
-        var activityDateMoment = new Time.Moment(activityDateUnixs[idx]-timeZoneOffset);
+    function countDaysFromToday(unix) {
+        var activityDateMoment = new Time.Moment(unix-timeZoneOffset);
         var interval = todayMoment.subtract(activityDateMoment);
         return interval.value() / SECOND_OF_DAY;
     }
@@ -188,5 +212,9 @@ class EasyCountDownView extends WatchUi.View {
         } else {
             return Gfx.COLOR_RED;
         }
+    }
+
+    function getFontSize(numOfActivity) {
+        return Gfx.FONT_SMALL;
     }
 }

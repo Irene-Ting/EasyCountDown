@@ -1,28 +1,31 @@
-import Toybox.Graphics;
 import Toybox.WatchUi;
 import Toybox.System;
 import Toybox.Time;
+using Toybox.Graphics as Gfx;
 using Toybox.Time.Gregorian;
+using Toybox.Application as App;
 
 class BigCountDownView extends WatchUi.View {
     private var activityName;
-    private var activityDateUnix;
-    private var utc;
-    private var width;
-    private var height;
+    private var activityDate;
+    private var activityDays;
+    private var dcWidth;
+    private var dcHeight;
     const WEEK = 7;
 
-    function initialize(name, date) {
+    function initialize(curPage) {
         View.initialize();
-        activityName = name;
-        activityDateUnix = date;
+        var activityData = App.getApp().getProperty("activityData");
+        activityName = activityData[curPage][0];
+        activityDays = activityData[curPage][1];
+        activityDate = activityData[curPage][2];
     }
 
     // Load your resources here
     function onLayout(dc as Dc) as Void {
         setLayout(Rez.Layouts.MainLayout(dc));
-        width = dc.getWidth();
-        height = dc.getHeight();
+        dcWidth = dc.getWidth();
+        dcHeight = dc.getHeight();
     }
 
     // Called when this View is brought to the foreground. Restore
@@ -33,23 +36,12 @@ class BigCountDownView extends WatchUi.View {
 
     // Update the view
     function onUpdate(dc as Dc) as Void {
-        var activityDateString = transferUnixToString(activityDateUnix);
-
-        var timeZoneOffset = System.getClockTime().timeZoneOffset;
-        var activityDateMoment = new Time.Moment(activityDateUnix-timeZoneOffset);
-        var todayMoment = new Time.Moment(Time.today().value());
-        var interval = todayMoment.subtract(activityDateMoment);
-        var days = interval.value() / 86400;
-
-        // System.println(days);
-        // System.println(activityDateString);
-
-        // draw
-        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
+        dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_BLACK);
         dc.clear();
-        drawActivityName(dc);
-        drawActivityDate(dc, activityDateString);
-        drawCountDays(dc, days);
+
+        drawActivityName(dc, activityName);
+        drawActivityDate(dc, activityDate);
+        drawCountDays(dc, activityDays);
     }
 
     // Called when this View is removed from the screen. Save the
@@ -58,66 +50,60 @@ class BigCountDownView extends WatchUi.View {
     function onHide() as Void {
     }
 
-    function transferUnixToString(unix) {
-        var moment = new Time.Moment(unix);
-        var lang = Gregorian.info(moment, Time.FORMAT_SHORT);
-		return lang.format("$1$/$2$/$3$", [lang.year, lang.month, lang.day]);
-    }
-
-    function drawActivityName(dc) {
-        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
+    function drawActivityName(dc, name) {
+        var color = getColor(activityDays);
+        dc.setColor(color, Gfx.COLOR_TRANSPARENT);
         dc.drawText(
-	    	width / 2, 
-	    	height * 0.15, 
-	    	Graphics.FONT_TINY, 
-	    	activityName, 
-	    	Graphics.TEXT_JUSTIFY_CENTER
+	    	dcWidth / 2, 
+	    	dcHeight * 0.15, 
+	    	Gfx.FONT_TINY, 
+	    	name, 
+	    	Gfx.TEXT_JUSTIFY_CENTER
 	    );
     }
 
-    function drawActivityDate(dc, activityDateString) {
-        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
+    function drawActivityDate(dc, date) {
+        dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
         dc.drawText(
-	    	width / 2, 
-	    	height * 0.25, 
-	    	Graphics.FONT_TINY, 
-	    	activityDateString, 
-	    	Graphics.TEXT_JUSTIFY_CENTER
+	    	dcWidth / 2, 
+	    	dcHeight * 0.25, 
+	    	Gfx.FONT_TINY, 
+	    	date, 
+	    	Gfx.TEXT_JUSTIFY_CENTER
 	    );
     }
 
     function drawCountDays(dc, days) {
-        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
+        dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
         dc.drawText(
-	    	width / 2, 
-	    	height * 0.6, 
-	    	Graphics.FONT_LARGE, 
+	    	dcWidth / 2, 
+	    	dcHeight * 0.6, 
+	    	Gfx.FONT_LARGE, 
 	    	days, 
-	    	Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER
+	    	Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER
 	    );
 
         var color = getColor(days);
         dc.setPenWidth(5);
-        dc.setColor(color, Graphics.COLOR_TRANSPARENT);
+        dc.setColor(color, Gfx.COLOR_TRANSPARENT);
         dc.drawCircle(
-            width / 2,
-            height * 0.6,
-            width * 0.2
+            dcWidth / 2,
+            dcHeight * 0.6,
+            dcWidth * 0.2
         );
     }
 
     function getColor(days) {
         if(days > WEEK * 12) {
-            return Graphics.COLOR_PURPLE;
+            return Gfx.COLOR_PURPLE;
         } else if(days > WEEK *4) {
-            return Graphics.COLOR_BLUE;
+            return Gfx.COLOR_BLUE;
         } else if(days > WEEK) {
-            return Graphics.COLOR_GREEN;
+            return Gfx.COLOR_GREEN;
         } else if(days > 3) {
-            return Graphics.COLOR_ORANGE;
+            return Gfx.COLOR_ORANGE;
         } else {
-            return Graphics.COLOR_RED;
+            return Gfx.COLOR_RED;
         }
     }
-
 }

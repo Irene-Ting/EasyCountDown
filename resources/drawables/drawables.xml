@@ -1,5 +1,4 @@
 <drawables>
     <bitmap id="LauncherIcon" filename="launcher_icon.png" />
-    <bitmap id="CalendarIcon" filename="calendar.png" />
-    <bitmap id="SadFace" filename="sadface.png" />
+    <bitmap id="CalendarIcon" filename="calendar.png"/>
 </drawables>

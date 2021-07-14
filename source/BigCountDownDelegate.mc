@@ -8,55 +8,29 @@ class BigCountDownDelegate extends WatchUi.BehaviorDelegate {
 
     function initialize() {
         BehaviorDelegate.initialize();
-        totalPages = 5;
+        totalPages = App.getApp().getProperty("totalPages");
         curPage = App.getApp().getProperty("curPage");
     }
-    function onKey(keyEvent) {
-        System.println(keyEvent.getKey());         // e.g. KEY_MENU = 7
-        // var view = new BigCountDownView("testing", "1000");
-        // var delegate;
-        // // menu.setTitle("My Menu");
-        // // menu.addItem("Item One", :one);
-        // // menu.addItem("Item Two", :two);
-        // delegate = new EasyCountDownDelegate(); // a WatchUi.MenuInputDelegate
-        // WatchUi.pushView(view, delegate, WatchUi.SLIDE_IMMEDIATE);
-        // return true;
-    }
+
     function onNextPage() {
         curPage = (curPage + 1) % totalPages;
         App.getApp().setProperty("curPage", curPage);
-        System.println(curPage);
-        var view = new BigCountDownView("next", curPage*86400);
-        var delegate = new BigCountDownDelegate(); // a WatchUi.MenuInputDelegate
+        var view = new BigCountDownView(curPage);
+        var delegate = new BigCountDownDelegate();
         WatchUi.switchToView(view, delegate, WatchUi.SLIDE_DOWN);
         return true;
     }
+
     function onPreviousPage() {
-        curPage = (curPage + 4) % totalPages;
+        curPage = (curPage + (totalPages-1)) % totalPages;
         App.getApp().setProperty("curPage", curPage);
-        System.println(curPage);
-        var view = new BigCountDownView("prev", curPage*86400);
-        var delegate = new BigCountDownDelegate(); // a WatchUi.MenuInputDelegate
+        var view = new BigCountDownView(curPage);
+        var delegate = new BigCountDownDelegate();
         WatchUi.switchToView(view, delegate, WatchUi.SLIDE_UP);
         return true;
     }
-    // function onSelect() {
-    //     System.println("onSelect");
-    //     System.println(keyEvent.getKey());         // e.g. KEY_MENU = 7
-    //     var view = new BigCountDownView("testing", "1000");
-    //     var delegate;
-    //     delegate = new EasyCountDownDelegate(); // a WatchUi.MenuInputDelegate
-    //     WatchUi.pushView(view, delegate, WatchUi.SLIDE_IMMEDIATE);
-    //     return true;
-    // }
+    
     function onMenu() {
-        // var menu = new WatchUi.Menu();
-        // var delegate;
-        // menu.setTitle("My Menu");
-        // menu.addItem("Item One", :one);
-        // menu.addItem("Item Two", :two);
-        // delegate = new EasyCountDownDelegate(); // a WatchUi.MenuInputDelegate
-        // WatchUi.pushView(menu, delegate, WatchUi.SLIDE_IMMEDIATE);
         return true;
     }
 }
