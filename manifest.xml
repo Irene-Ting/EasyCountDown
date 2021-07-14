@@ -43,7 +43,10 @@
             <iq:product id="vivoactive_hr"/>
         </iq:products>
         <iq:permissions/>
-        <iq:languages/>
+        <iq:languages>
+            <iq:language>eng</iq:language>
+            <iq:language>zht</iq:language>
+        </iq:languages>
         <iq:barrels/>
     </iq:application>
 </iq:manifest>

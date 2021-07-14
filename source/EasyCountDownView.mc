@@ -15,6 +15,7 @@ class EasyCountDownView extends WatchUi.View {
     private var activityNames = new [MAX_ACTIVITY];
     private var activityDateUnixs = new [MAX_ACTIVITY];
     private var activityShowData = new [MAX_ACTIVITY];
+    private var noActivityMsg;
     private var numOfActivity;
     private var appIcon;
     private var sadFaceIcon;
@@ -36,7 +37,7 @@ class EasyCountDownView extends WatchUi.View {
     function onLayout(dc as Dc) as Void {
         setLayout(Rez.Layouts.MainLayout(dc));
         appIcon = App.loadResource(Rez.Drawables.CalendarIcon);
-        // sadFaceIcon = App.loadResource(Rez.Drawables.SadFace);
+        noActivityMsg = App.loadResource(Rez.Strings.noActivityMsg);
         dcWidth = dc.getWidth();
         dcHeight = dc.getHeight();
     }
@@ -154,7 +155,7 @@ class EasyCountDownView extends WatchUi.View {
 	    	dcWidth / 2, 
 	    	dcHeight * 0.75, 
 	    	Gfx.FONT_XTINY, 
-	    	"go to setting and\nadd your 1st activity", 
+	    	noActivityMsg, 
 	    	Gfx.TEXT_JUSTIFY_CENTER
 	    );
     }

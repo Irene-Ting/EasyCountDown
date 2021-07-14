@@ -3,4 +3,5 @@
     <string id="activityName">Activity Name</string>
     <string id="activityDate">Activity Date</string>
     <string id="exceedMaxLength">The name exceed the max length!</string>
+    <string id="noActivityMsg">go to setting and\nadd your 1st activity</string>
 </strings>
