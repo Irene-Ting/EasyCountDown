@@ -18,7 +18,7 @@ class EasyCountDownApp extends Application.AppBase {
 
     // Return the initial view of your application here
     function getInitialView() as Array<Views or InputDelegates>? {
-        return [ new EasyCountDownView() ] as Array<Views or InputDelegates>;
+        return [ new EasyCountDownView(), new EasyCountDownDelegate() ] as Array<Views or InputDelegates>;
     }
 
 }

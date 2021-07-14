@@ -1,8 +1,22 @@
 <settings>
-	<setting propertyKey="@Properties.activityName" title="@Strings.activityName">
-        <settingConfig type="alphaNumeric"/>
+	<setting propertyKey="@Properties.activityName1" title="@Strings.activityName">
+        <settingConfig type="alphaNumeric" maxLength="12" errorMessage="@Strings.exceedMaxLength"/>
     </setting>
-    <setting propertyKey="@Properties.activityDate" title="@Strings.activityDate">
+    <setting propertyKey="@Properties.activityDate1" title="@Strings.activityDate">
+        <settingConfig type="date"/>
+    </setting>
+
+    <setting propertyKey="@Properties.activityName2" title="@Strings.activityName">
+        <settingConfig type="alphaNumeric" maxLength="12" errorMessage="@Strings.exceedMaxLength"/>
+    </setting>
+    <setting propertyKey="@Properties.activityDate2" title="@Strings.activityDate">
+        <settingConfig type="date"/>
+    </setting>
+
+    <setting propertyKey="@Properties.activityName3" title="@Strings.activityName">
+        <settingConfig type="alphaNumeric" maxLength="12" errorMessage="@Strings.exceedMaxLength"/>
+    </setting>
+    <setting propertyKey="@Properties.activityDate3" title="@Strings.activityDate">
         <settingConfig type="date"/>
     </setting>
 </settings>

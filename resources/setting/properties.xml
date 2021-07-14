@@ -1,4 +1,8 @@
 <properties>
-    <property id="activityName" type="string"></property>
-    <property id="activityDate" type="number">1640966400</property> 
+    <property id="activityName1" type="string">Activity1</property>
+    <property id="activityDate1" type="number">1640923199</property> 
+    <property id="activityName2" type="string">Activity2</property>
+    <property id="activityDate2" type="number">1640923199</property> 
+    <property id="activityName3" type="string">Activity3</property>
+    <property id="activityDate3" type="number">1640923199</property> 
 </properties>

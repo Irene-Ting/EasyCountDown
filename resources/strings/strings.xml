@@ -2,4 +2,5 @@
     <string id="AppName">EasyCountDown</string>
     <string id="activityName">Activity Name</string>
     <string id="activityDate">Activity Date</string>
+    <string id="exceedMaxLength">The name exceed the max length!</string>
 </strings>
