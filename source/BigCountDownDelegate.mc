@@ -17,7 +17,7 @@ class BigCountDownDelegate extends WatchUi.BehaviorDelegate {
         App.getApp().setProperty("curPage", curPage);
         var view = new BigCountDownView(curPage);
         var delegate = new BigCountDownDelegate();
-        WatchUi.switchToView(view, delegate, WatchUi.SLIDE_DOWN);
+        WatchUi.switchToView(view, delegate, WatchUi.SLIDE_UP);
         return true;
     }
 
@@ -26,7 +26,7 @@ class BigCountDownDelegate extends WatchUi.BehaviorDelegate {
         App.getApp().setProperty("curPage", curPage);
         var view = new BigCountDownView(curPage);
         var delegate = new BigCountDownDelegate();
-        WatchUi.switchToView(view, delegate, WatchUi.SLIDE_UP);
+        WatchUi.switchToView(view, delegate, WatchUi.SLIDE_DOWN);
         return true;
     }
     
