@@ -164,7 +164,7 @@ class EasyCountDownView extends WatchUi.View {
         var activityName = nameAndDays[0];
         var activityDays = nameAndDays[1];
         var color = getColor(activityDays);
-        var fontSize = getFontSize(numOfActivity);
+        var fontSize = getFontSize(nameAndDays);
 
         dc.setColor(color, Gfx.COLOR_TRANSPARENT);
         dc.setPenWidth(5);
@@ -215,7 +215,18 @@ class EasyCountDownView extends WatchUi.View {
         }
     }
 
-    function getFontSize(numOfActivity) {
-        return Gfx.FONT_SMALL;
+    function getFontSize(nameAndDays) {
+        var activityName = nameAndDays[0];
+        var activityDays = nameAndDays[1];
+        var lengthOfNameAndDays = activityName.length()+activityDays.toString().length();
+        if(lengthOfNameAndDays < 8) {
+            return Gfx.FONT_LARGE;
+        } else if(lengthOfNameAndDays < 10){
+            return Gfx.FONT_MEDIUM;
+        } else if(lengthOfNameAndDays < 12) {
+            return Gfx.FONT_TINY;
+        } else {
+            return Gfx.FONT_XTINY;
+        }
     }
 }
