@@ -7,11 +7,11 @@ class EasyCountDownDelegate extends WatchUi.BehaviorDelegate {
     }
 
     function onSelect() {
-        var totalPages = App.getApp().getProperty("totalPages");
+        var totalPages = App.Storage.getValue("totalPages");
         if(totalPages == 0) {
             return;
         }
-        App.getApp().setProperty("curPage", 0);
+        App.Storage.setValue("curPage", 0);
         var view = new BigCountDownView(0);
         var delegate = new BigCountDownDelegate();
         WatchUi.pushView(view, delegate, WatchUi.SLIDE_IMMEDIATE);

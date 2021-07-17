@@ -15,7 +15,7 @@ class BigCountDownView extends WatchUi.View {
 
     function initialize(curPage) {
         View.initialize();
-        var activityData = App.getApp().getProperty("activityData");
+        var activityData = App.Storage.getValue("activityData");
         activityName = activityData[curPage][0];
         activityDays = activityData[curPage][1];
         activityDate = activityData[curPage][2];

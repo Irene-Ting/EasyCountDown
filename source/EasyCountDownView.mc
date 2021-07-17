@@ -30,7 +30,7 @@ class EasyCountDownView extends WatchUi.View {
         todayMoment = new Time.Moment(Time.today().value());
         numOfActivity = loadActivityFromSetting();
         sortActivityByTime();
-        App.getApp().setProperty("totalPages", numOfActivity);
+        App.Storage.setValue("totalPages", numOfActivity);
     }
 
     // Load your resources here
@@ -71,7 +71,7 @@ class EasyCountDownView extends WatchUi.View {
             }
         }
 
-        App.getApp().setProperty("activityData", activityShowData);
+        App.Storage.setValue("activityData", activityShowData);
     }
 
     // Called when this View is removed from the screen. Save the
@@ -83,8 +83,8 @@ class EasyCountDownView extends WatchUi.View {
     function loadActivityFromSetting() {
         var index = 0;
         for(var i = 1; i <= MAX_ACTIVITY; i++) {
-            var activityName = getApp().getProperty("activityName"+i.toString());
-            var activityDateUnix = getApp().getProperty("activityDate"+i.toString());
+            var activityName = App.Properties.getValue("activityName"+i.toString());
+            var activityDateUnix = App.Properties.getValue("activityDate"+i.toString());
             if(activityName.length() != 0) {
                 activityNames[index] = activityName;
                 activityDateUnixs[index] = activityDateUnix;
@@ -216,17 +216,34 @@ class EasyCountDownView extends WatchUi.View {
     }
 
     function getFontSize(nameAndDays) {
+        System.println(dcWidth);
         var activityName = nameAndDays[0];
         var activityDays = nameAndDays[1];
         var lengthOfNameAndDays = activityName.length()+activityDays.toString().length();
-        if(lengthOfNameAndDays < 8) {
-            return Gfx.FONT_LARGE;
-        } else if(lengthOfNameAndDays < 10){
-            return Gfx.FONT_MEDIUM;
-        } else if(lengthOfNameAndDays < 12) {
-            return Gfx.FONT_TINY;
+        if(isSmallScreen(dcWidth)) {
+            if(lengthOfNameAndDays < 6) {
+                return Gfx.FONT_LARGE;
+            } else if(lengthOfNameAndDays < 8){
+                return Gfx.FONT_MEDIUM;
+            } else if(lengthOfNameAndDays < 10) {
+                return Gfx.FONT_TINY;
+            } else {
+                return Gfx.FONT_XTINY;
+            }
         } else {
-            return Gfx.FONT_XTINY;
+            if(lengthOfNameAndDays < 8) {
+                return Gfx.FONT_LARGE;
+            } else if(lengthOfNameAndDays < 11){
+                return Gfx.FONT_MEDIUM;
+            } else if(lengthOfNameAndDays < 14) {
+                return Gfx.FONT_TINY;
+            } else {
+                return Gfx.FONT_XTINY;
+            }
         }
+    }
+
+    function isSmallScreen(dcWidth) {
+        return dcWidth < 210;
     }
 }

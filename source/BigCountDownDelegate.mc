@@ -8,13 +8,13 @@ class BigCountDownDelegate extends WatchUi.BehaviorDelegate {
 
     function initialize() {
         BehaviorDelegate.initialize();
-        totalPages = App.getApp().getProperty("totalPages");
-        curPage = App.getApp().getProperty("curPage");
+        totalPages = App.Storage.getValue("totalPages");
+        curPage = App.Storage.getValue("curPage");
     }
 
     function onNextPage() {
         curPage = (curPage + 1) % totalPages;
-        App.getApp().setProperty("curPage", curPage);
+        App.Storage.setValue("curPage", curPage);
         var view = new BigCountDownView(curPage);
         var delegate = new BigCountDownDelegate();
         WatchUi.switchToView(view, delegate, WatchUi.SLIDE_UP);
@@ -23,7 +23,7 @@ class BigCountDownDelegate extends WatchUi.BehaviorDelegate {
 
     function onPreviousPage() {
         curPage = (curPage + (totalPages-1)) % totalPages;
-        App.getApp().setProperty("curPage", curPage);
+        App.Storage.setValue("curPage", curPage);
         var view = new BigCountDownView(curPage);
         var delegate = new BigCountDownDelegate();
         WatchUi.switchToView(view, delegate, WatchUi.SLIDE_DOWN);

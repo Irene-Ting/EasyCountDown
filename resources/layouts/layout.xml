@@ -1,2 +1,2 @@
-<layout id="MainLayout">
+<layout id="MainLayout" scope="glance">
 </layout>

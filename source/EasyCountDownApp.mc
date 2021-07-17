@@ -21,6 +21,9 @@ class EasyCountDownApp extends Application.AppBase {
         return [ new EasyCountDownView(), new EasyCountDownDelegate() ] as Array<Views or InputDelegates>;
     }
 
+    function getGlanceView() {
+        return [ new EasyCountDownGlanceView() ];
+    }
 }
 
 function getApp() as EasyCountDownApp {
